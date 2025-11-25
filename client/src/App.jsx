@@ -5,8 +5,9 @@ import Navbar from "./component/Navbar";
 import ProtectedRoute from "./component/ProtectedRoute";
 import { ToastProvider } from "./context/ToastContext";
 import Home from "./pages/Home";
-import PaymentSuccess from "./pages/PaymentSuccess.jsx";
+
 import PaymentHistory from "./pages/Paymenthistory.jsx";
+import PaymentSuccess from "./pages/PaymentSuccess.jsx";
 
 const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
 const AdminManageCars = lazy(() => import("./pages/admin/ManageCars"));
