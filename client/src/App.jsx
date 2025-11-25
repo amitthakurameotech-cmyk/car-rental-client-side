@@ -1,126 +1,12 @@
-// import React from "react";
-// import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-// import Navbar from "./component/Navbar";
-// import ProtectedRoute from "./component/ProtectedRoute";
-// import { Suspense, lazy } from "react";
-// import Home from "./pages/Home";
-// import { ToastProvider } from "./context/ToastContext";
-// import PaymentSuccess from "./pages/PaymentSuccess";
-// import PaymentHistory from "./pages/PaymentHistory";
 
-
-// const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
-// const AdminManageCars = lazy(() => import("./pages/admin/ManageCars"));
-// const AdminManageBookings = lazy(() => import("./pages/admin/ManageBookings"));
-// const CarsPage = lazy(() => import("./pages/CarsPage"));
-// const BookingPage = lazy(() => import("./pages/BookingPage"));
-// const Signup = lazy(() => import("./pages/signup"));
-// const Login = lazy(() => import("./pages/login"));
-// const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
-// const ResetPassword = lazy(() => import("./pages/ResetPassword"));
-// const About = lazy(() => import("./pages/About"));
-// const Contact = lazy(() => import("./pages/Contact"));
-// const Mybooking = lazy(() => import("./pages/Mybooking"));
-// const Checkout = lazy(() => import("./pages/Checkout"));
-// const User = lazy(() => import("./pages/admin/User"));
-// const Detail = lazy(() => import("./pages/Detail"));
-
-// function AppContent() {
-//   const location = useLocation();
-//   const hideNavbar = ["/", "/signup", "/forgot-password"].includes(location.pathname) || location.pathname.startsWith("/reset-password/");
-
-//   return (
-//     <>
-//       {!hideNavbar && <Navbar />}
-//       <Suspense
-//         fallback={
-//           <div className="min-h-screen flex items-center justify-center text-xl text-gray-600">
-//             Loading...
-//           </div>
-//         }
-//       >
-//         <Routes>
-//           <Route path="/" element={<Login />} />
-//           <Route path="/home" element={<Home />} />
-//           <Route path="/cars" element={<CarsPage />} />
-//           <Route path="/mybooking" element={<Mybooking />} />
-//           <Route path="/checkout/:bookingId" element={<Checkout />} />
-//           <Route path="/detail/:id" element={<Detail />} />
-//           <Route path="/forgot-password" element={<ForgotPassword />} />
-//           <Route path="/reset-password/:token" element={<ResetPassword />} />
-//           <Route path="/history" element={<PaymentHistory />} />
-//           {/* Stripe payment success route */}
-//           <Route path="/payment-success" element={<PaymentSuccess />} />
-//           <Route
-//             path="/book"
-//             element={
-//               <ProtectedRoute>
-//                 <BookingPage />
-//               </ProtectedRoute>
-//             }
-//           />
-//           <Route path="/signup" element={<Signup />} />
-//           <Route path="/about" element={<About />} />
-//           <Route path="/contact" element={<Contact />} />
-         
-        
-          
-//           {/* Admin routes */}
-//           <Route
-//             path="/admin/dashboard"
-//             element={
-//               <ProtectedRoute roles={["admin"]}>
-//                 <AdminDashboard />
-//               </ProtectedRoute>
-//             }
-//           />
-//           <Route
-//             path="/admin/cars"
-//             element={
-//               <ProtectedRoute roles={["admin"]}>
-//                 <AdminManageCars />
-//               </ProtectedRoute>
-//             }
-//           />
-//           <Route
-//             path="/admin/bookings"
-//             element={
-//               <ProtectedRoute roles={["admin"]}>
-//                 <AdminManageBookings />
-//               </ProtectedRoute>
-//             }
-//           />
-//           <Route
-//             path="/admin/user"
-//             element={
-//               <ProtectedRoute roles={["admin"]}>
-//                 <User />
-//               </ProtectedRoute>
-//             }
-//           />
-//         </Routes>
-//       </Suspense>
-//     </>
-//   );
-// }
-
-// export default function App() {
-//   return (
-//     <BrowserRouter>
-//       <ToastProvider>
-//         <AppContent />
-//       </ToastProvider>
-//     </BrowserRouter>
-//   );
-// }
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./component/Navbar";
 import ProtectedRoute from "./component/ProtectedRoute";
 import { ToastProvider } from "./context/ToastContext";
 import Home from "./pages/Home";
-import PaymentSuccess from "./pages/PaymentSuccess";
-import PaymentHistory from "./pages/PaymentHistory";
+import PaymentSuccess from "./pages/PaymentSuccess.jsx";
+import PaymentHistory from "./pages/Paymenthistory.jsx";
 
 const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
 const AdminManageCars = lazy(() => import("./pages/admin/ManageCars"));
