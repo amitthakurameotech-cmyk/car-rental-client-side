@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/*
+	Global light theme defaults.
+	- Light gray body text
+	- White cards/inputs
+	- Buttons and links hover to blue
+	- Small helpers: .muted, .card, .btn, .clickable
+*/
+
